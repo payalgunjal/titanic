@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Passengers Prediction</title>
+</head>
+<center>
+<body style="background-color: rgb(247, 240, 209);">
+    <h1> Titanic Prediction </h1>
+    <form method="get" action="/titanic">
+        <!-Headings for the form -->
+        <div class="headingsContainer">
+            <h3 style="color:rgb(189, 54, 171);">`**Predict Dead Or Alive**`</h3>
+        </div>
+        
+        <!-Main container for all inputs -->
+        <div class="mainContainer">
+            <label for="age" style="color:rgb(16, 8, 6);">Pclass</label><br>
+            <input type="text" placeholder="Enter Details" name="Pclass" required>
+            <br><br>
+            <label for="sex" style="color:rgb(16, 8, 6);">Gender</label><br>
+            <select placeholder="Enter Details" name="Gender" style="width: 180px;" required>
+              <option></option>
+              <option value = "male">male</option>
+              <option value = "female">female</option>
+            </select>
+            <br><br>
+            <label for="bmi" style="color:rgb(16, 8, 6);">Age</label><br>
+            <input type="text" placeholder="Enter Details" name="Age" required>
+            <br><br>
+            <label for="children" style="color:rgb(16, 8, 6);">SibSp</label><br>
+            <input type="text" placeholder="Enter Details" name="SibSp" required>
+            <br><br>
+            <label for="children" style="color:rgb(16, 8, 6);">Parch</label><br>
+            <input type="text" placeholder="Enter Details" name="Parch" required>
+            <br><br>
+            <label for="children" style="color:rgb(16, 8, 6);">Fare</label><br>
+            <input type="text" placeholder="Enter Details" name="Fare" required>
+            <br><br>
+            <label for="gender" style="color:rgb(16, 8, 6);">Embarked</label><br>
+            <select placeholder="Enter Details" name="Embarked" style="width: 180px;" required>
+                <option></option>
+                <option value = "S">S</option>
+                <option value = "C">C</option>
+                <option value = "Q">Q</option>
+            </select>
+
+            <br><br>
+            <!-Submit button -->
+            <input type="submit" value="Predict!">
+            <br><br>
+            <h3 style="color:rgb(196, 7, 7);">Prediction >>> <b> {{ prediction }}</b> </h3>
+        </div>
+    </form>
+</center>
+
+</body>
+</html>
